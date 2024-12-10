@@ -1,1 +1,41 @@
+subosito/flutter-action@v2
+with: 
 
+3 flutter-version: stable 
+
+4 channel: stable 
+
+5 architecture: X64 
+
+6 cache: false 
+
+7 pub-cache-path: default 
+
+8 dry-run: false
+
+
++x "$GITHUB_ACTION_PATH/setup.sh"
+chmod +x "$GITHUB_ACTION_PATH/setup.sh" 
+
+11 shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+$GITHUB_ACTION_PATH/setup.sh -p \ 
+
+14 -n 'stable' \ 
+
+15 -f '' \ 
+
+16 -a 'X64' \ 
+
+17 -k '' \ 
+
+18 -c '' \ 
+
+19 -l '' \ 
+
+20 -d 'default' \ 
+
+21 stable
+
+
+
+$GITHUB_ACTION_PATH/setup.sh -p \
